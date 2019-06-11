@@ -2,7 +2,7 @@
 // 原始数据类型包括：布尔值、数值、字符串、null、undefined 以及 ES6 中的新类型 Symbol。
 
 
-
+// 1 - boolean
 // boolean 布尔值  ==> let booleanName: boolean = false  ==> let name: type = value
 let isDone: boolean = false;
 
@@ -24,3 +24,15 @@ let name3: boolean = Boolean(1+1>2); //false
  2. let name2: Boolean = new Boolean(1); //使用new生成新的boolean类型 需要大写声明
  3. let name3: boolean = Boolean(1);
 */
+
+
+
+// 2 - number
+let decLiteral: number = 6;
+let hexLiteral: number = 0xf00d;
+// ES6 中的二进制表示法
+let binaryLiteral: number = 0b1010;
+// ES6 中的八进制表示法
+let octalLiteral: number = 0o744;
+let notANumber: number = NaN;
+let infinityNumber: number = Infinity;
