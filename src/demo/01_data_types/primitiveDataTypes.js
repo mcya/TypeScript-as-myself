@@ -27,3 +27,10 @@ var binaryLiteral = 10;
 var octalLiteral = 484;
 var notANumber = NaN;
 var infinityNumber = Infinity;
+// 字符串
+var myName = 'Tom';
+// 空值
+// JavaScript 没有空值（Void）的概念，在 TypeScript 中，可以用 void 表示没有任何返回值的函数
+// 在 TypeScript 中，可以使用 null 和 undefined 来定义这两个原始数据类型
+var u;
+var num = u;
