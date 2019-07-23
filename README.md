@@ -33,3 +33,10 @@ console.log('sayHello', sayHello(user))
 
 `JavaScript` 的类型分为两种: 原始数据类型`（Primitive data types）`和对象类型`（Object types）`。
 原始数据类型包括: `布尔值`、`数值`、`字符串`、`null`、`undefined` 以及 ES6 中的新类型 `Symbol`。
+
+### 任意值(Any)
+
+任意值（Any）用来表示允许赋值为任意类型.
+
+> 即在typescript中任何值都是有数据类型的,如果不按照对应的类型写在typescript中都是会提示报错的，虽然不影响编译结果。
+> 如果使用Any来声明变量，在typescript中是被允许赋任何值的
