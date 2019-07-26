@@ -41,11 +41,35 @@ console.log('sayHello', sayHello(user))
 > 即在typescript中任何值都是有数据类型的,如果不按照对应的类型写在typescript中都是会提示报错的，虽然不影响编译结果。
 > 如果使用Any来声明变量，在typescript中是被允许赋任何值的
 
+```js
+let myFavoriteNumber: any = 'seven';
+myFavoriteNumber = 7;
+```
+
 虽然Any被赋予任何值，包括添加属性和function方法，但是不建议添加不存在的东西。在typescript中可能不报错，但是得考虑在编译后的js文件是否可用。
 
 ### 类型推论(Type Inference)
 在typescript中如果不声明变量类型，其会根据变量的第一赋值来判断该变量的类型，且默认赋予其类型。
+```js
+let myFavoriteNumber = 'seven'; //等价于 let myFavoriteNumber:string = 'seven';
+let myFavoriteNumber; // 等价于let myFavoriteNumber:any;
+```
 
 
 如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成 any 类型而完全不被类型检查。
 如果定义的时候赋值了，则根据值的类型了来推论出该变量的类型，且默认赋予该类型。
+
+### 联合类型(Union Types)
+表示取值可以为多种类型中的一种。
+```js
+let myFavoriteNumber: string | number;
+myFavoriteNumber = 'seven';
+myFavoriteNumber = 7;
+
+myFavoriteNumber = true; //error: Type 'boolean' is not assignable to type 'string | number'
+
+// 联合声明的方法属性 只能访问其共有属性
+function getString(something: string | number): string {
+    return something.toString();
+}
+```
