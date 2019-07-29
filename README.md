@@ -1,4 +1,4 @@
-## TypeScript
+# TypeScript #
 
 ### 定义
 
@@ -16,6 +16,27 @@
 以上命令会在全局环境下安装 `tsc` 命令，安装完成之后，我们就可以在任何地方执行 `tsc` 命令了。需要`-g`全局安装后才可执行`tsc`相关命令操作。
 我们约定使用 `TypeScript` 编写的文件以 `.ts` 为后缀，用 `TypeScript` 编写 React 时，以 `.tsx` 为后缀。
 
+------------------------------
+
+### 目录结构
+```
+
+├─src                    #代码模块
+│ ├─demos                   #typescript 学习demo
+│ │  ├─ 01_data_types           #原始数据类型 (Primitive data types)
+│ │  ├─ 02_any                  #任意值 (Any)
+│ │  ├─ 03_TypeInference        #类型推论 (Type Inference)
+│ │  ├─ 05_UnionTypes           #联合类型 (Union Types)
+│ │  ├─ 06_Interfaces           #接口 (Interfaces)
+│ │
+│ ├─projTsDemo              #结合VUE在项目中使用的typescript demo
+
+```
+
+
+------------------------------
+
+## 内容简介：
 
 ### Hello TypeScript
 ```ts
@@ -73,3 +94,6 @@ function getString(something: string | number): string {
     return something.toString();
 }
 ```
+
+### 对象的类型——接口(Interfaces)
+在 TypeScript 中，我们使用接口（Interfaces）来定义对象的类型。
