@@ -97,3 +97,7 @@ function getString(something: string | number): string {
 
 ### 对象的类型——接口(Interfaces)
 在 TypeScript 中，我们使用接口（Interfaces）来定义对象的类型。
+
+`即，自己定义一个数据类型，使用的时候必须得符合这个类型才OK`不仅需要属性类型是一致，也要求不能多或者少属性的，得一模一样！
+
+### 数组的类型
