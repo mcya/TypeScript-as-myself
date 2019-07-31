@@ -13,10 +13,10 @@ var fibonacci2 = [1, 1, 2, 3, 5];
 // 4. 可以用 any 表示数组中允许出现任意类型
 var list = ['Xcat Liu', 25, { website: 'http://www.baidu.com' }];
 // 5. 类数组
-var arguments = [1, 2, 3];
-function sum() {
-    var args = arguments;
-}
-function sums() {
-    var args = arguments;
-}
+// function sum() {
+//     let args: number[] = arguments;
+// }
+//
+// function sums() {
+//     let args: IArguments = arguments;
+// }
