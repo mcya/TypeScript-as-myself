@@ -1,6 +1,7 @@
 // 任意值 Any
 
 
+
 // let myFavoriteNumber: string = 'seven';
 // myFavoriteNumber = 7;
 // 当使用不对应的数据类型的时候会在编译过程中报错:
