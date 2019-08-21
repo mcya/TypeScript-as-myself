@@ -72,13 +72,48 @@ let tom1 = buildNameCheckBox('Cat', 'Tom');
 function buildDefaultName(firstName: string, lastName: string = 'Cat') {
     return firstName + ' ' + lastName;
 }
-let tomcat = buildDefaultName('Tom', 'Cat');
-let tom = buildDefaultName('Tom'); //这样是允许的
+let tomcat2 = buildDefaultName('Tom', 'Cat');
+let toms = buildDefaultName('Tom'); //这样是允许的
 
 // 或者这样也可以：
 // 即 不受「可选参数必须接在必需参数后面」的限制了
 function buildDefaultNames(firstName: string = 'Tom', lastName: string) {
     return firstName + ' ' + lastName;
 }
-let tomcat = buildDefaultNames('Tom', 'Cat');
+let tomcats = buildDefaultNames('Tom', 'Cat');
 let cat = buildDefaultNames(undefined, 'Cat');
+
+// 6.剩余参数
+// 6.1 - ES6: 使用 ...rest 的方式获取函数中的剩余参数（rest 参数）：
+function push(array, ...items) {
+    items.forEach(function(item) {
+        array.push(item);
+    });
+}
+let a = [];
+push(a, 1, 2, 3);
+
+// 6.2 - TypeScript: 事实上，items 是一个数组。所以我们可以用数组的类型来定义它：
+function pushs(array: any[], ...items: any[]) {
+    items.forEach(function(item) {
+        array.push(item);
+    });
+}
+let as = [];
+pushs(as, 1, 2, 3);
+
+
+// 7.重载
+// 重载允许一个函数接受不同数量或类型的参数时，作出不同的处理。
+// 即 可以使用重载定义多个 reverse 的函数类型
+function reverse(x: number): number;
+
+function reverse(x: string): string;
+
+function reverse(x: number | string): number | string {
+    if (typeof x === 'number') {
+        return Number(x.toString().split('').reverse().join(''));
+    } else if (typeof x === 'string') {
+        return x.split('').reverse().join('');
+    }
+}
